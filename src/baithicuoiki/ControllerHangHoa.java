@@ -15,10 +15,11 @@ public class ControllerHangHoa {
         return sc;
     }
 
-    
     public HangHoa inputHangHoa(){
         HangHoa hanghoa = null;
         int id = (ds.size() > 0) ? (ds.size() +1) : 1;
+        System.out.println("Nhap ID");
+        int maH = sc.nextInt();
         System.out.println("Nhap Ten Hang Hoa: ");
         String tenHH = sc.nextLine();
         System.out.println("Nhap Don Gia Hang Hoa:");
@@ -35,7 +36,7 @@ public class ControllerHangHoa {
                 int thoiGianBH = sc.nextInt();
                 System.out.println("Nhap Cong Suat");
                 Double congSuat = sc.nextDouble();
-                hanghoa = new HangHoaDienMay(sLTHKK, tenHH, donGiaHH, thoiGianBH, congSuat);
+                hanghoa = new HangHoaDienMay(maH, sLTHKK, tenHH, donGiaHH, thoiGianBH, congSuat);
                 break;
             case 2:
                 System.out.println("Hay Chon Chuc Nang Cho Thuc Pham");
@@ -46,7 +47,7 @@ public class ControllerHangHoa {
                     Date ngayHH = df.parse(sc.nextLine());
                     System.out.println("Nhap Nha Cung Cap");
                     String nhaCC = sc.nextLine();
-                    hanghoa = new HangHoaThucPham(sLTHKK, tenHH, donGiaHH, ngaySX, ngayHH, nhaCC);
+                    hanghoa = new HangHoaThucPham(maH, sLTHKK, tenHH, donGiaHH, ngaySX, ngayHH,nhaCC);
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
@@ -58,7 +59,7 @@ public class ControllerHangHoa {
                     Date ngayNhapKho = df.parse(sc.nextLine());
                     System.out.println("Nhap Nha San Suat");
                     String nhaSX = sc.nextLine();
-                    hanghoa = new HangHoaSanhSu(sLTHKK, tenHH, donGiaHH, nhaSX, ngayNhapKho);
+                    hanghoa = new HangHoaSanhSu(maH, sLTHKK, tenHH, donGiaHH, nhaSX, ngayNhapKho);
                 } catch (ParseException e) {
                     
                     e.printStackTrace();

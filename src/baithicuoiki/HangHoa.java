@@ -6,8 +6,9 @@ public abstract class HangHoa {
     private int maH, sLTHKK;
     private String tenHH;
     private double donGiaHH;
+    public abstract double VAT();
 
-    public HangHoa(int sLTHKK, String tenHH, double donGiaHH) {
+    public HangHoa(int maH, int sLTHKK, String tenHH, double donGiaHH) {
         this.maH = maH;
         this.sLTHKK = sLTHKK;
         this.tenHH = tenHH;
@@ -17,7 +18,6 @@ public abstract class HangHoa {
     public HangHoa() {
     }
 
-    
     public int getMaH() {
         return maH;
     }

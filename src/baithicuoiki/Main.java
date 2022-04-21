@@ -18,17 +18,16 @@ public class Main {
             Date d2 = sf.parse(s2);
             Date d3 = sf.parse(s3);
 
-            HangHoa h1 = new HangHoaThucPham(12, "Bia", 1500, d, d2, "Tiger");
-            HangHoa h2 = new HangHoaDienMay(1, "Tu lanh", 1_500_000, 20, 80);
-            HangHoa h3 = new HangHoaSanhSu(20, "Thia", 20_000, "Inox", d1);
-            HangHoa h4 = new HangHoaDienMay(5, "Tivi", 5_000_000, 10, 50);
-            HangHoa h5 = new HangHoaSanhSu(15, "Ke Bat", 200_000, "Inox", d2);
-            HangHoa h6 = new HangHoaThucPham(78, "bi dao", 2000, d1, d2, "Cong ty");
-            HangHoa h7 = new HangHoaDienMay(10, "May giat", 3_000_000, 10, 100);
-            HangHoa h8 = new HangHoaThucPham(10, "Mi ly", 1000, d1, d3, "exicook");
-            HangHoa h9 = new HangHoaSanhSu(5, "Chen", 5000, "Inox", d2);
-            HangHoa h10 = new HangHoaDienMay(9, "May suoi", 1_000_000, 10, 90);
-
+            HangHoa h1 = new HangHoaThucPham(1,12, "Bia", 1500, d, d2, "Tiger");
+            HangHoa h2 = new HangHoaDienMay(2,1, "Tu lanh", 1_500_000, 20, 80);
+            HangHoa h3 = new HangHoaSanhSu(3,20, "Thia", 20_000, "Inox", d1);
+            HangHoa h4 = new HangHoaDienMay(4,5, "Tivi", 5_000_000, 10, 50);
+            HangHoa h5 = new HangHoaSanhSu(5,15, "Ke Bat", 200_000, "Inox", d2);
+            HangHoa h6 = new HangHoaThucPham(6,78, "bi dao", 2000, d1, d2, "Cong ty");
+            HangHoa h7 = new HangHoaDienMay(7,10, "May giat", 3_000_000, 10, 100);
+            HangHoa h8 = new HangHoaThucPham(8,10, "Mi ly", 1000, d1, d3, "exicook");
+            HangHoa h9 = new HangHoaSanhSu(9,5, "Chen", 5000, "Inox", d2);
+            HangHoa h10 = new HangHoaDienMay(10,9, "May suoi", 1_000_000, 10, 90);
 
             dsHH.add(h1);
             dsHH.add(h2);
