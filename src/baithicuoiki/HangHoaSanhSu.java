@@ -42,7 +42,6 @@ public class HangHoaSanhSu extends HangHoa{
         return thueVat;
     }
     
-    
 }
 
 
