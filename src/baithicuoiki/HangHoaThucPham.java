@@ -6,17 +6,17 @@ public class HangHoaThucPham extends HangHoa{
     private Date ngaySX, ngayHH;
     private String nhaCungCap;
 
-    
-    public HangHoaThucPham(int sLTHKK, String tenHH, double donGiaHH, java.util.Date ngaySX2, java.util.Date ngayHH2, String nhaCC) {
-        super(sLTHKK, tenHH, donGiaHH);
-        this.ngaySX = ngaySX2;
-        this.ngayHH = ngayHH2;
-        this.nhaCungCap = nhaCC;
-    }
-    public HangHoaThucPham(Date ngaySX, Date ngayHH, String nhaCC) {
+    public HangHoaThucPham(int maH, int sLTHKK, String tenHH, double donGiaHH, Date ngaySX, Date ngayHH,
+            String nhaCungCap) {
+        super(maH, sLTHKK, tenHH, donGiaHH);
         this.ngaySX = ngaySX;
         this.ngayHH = ngayHH;
-        this.nhaCungCap = nhaCC;
+        this.nhaCungCap = nhaCungCap;
+    }
+    public HangHoaThucPham(Date ngaySX, Date ngayHH, String nhaCungCap) {
+        this.ngaySX = ngaySX;
+        this.ngayHH = ngayHH;
+        this.nhaCungCap = nhaCungCap;
     }
     public Date getNgaySX() {
         return ngaySX;
@@ -51,7 +51,14 @@ public class HangHoaThucPham extends HangHoa{
     
     @Override
     public String toString() {
-        return super.toString() +"HangHoaThucPham [ngayHH=" + ngayHH + ", ngaySX=" + ngaySX + ", nhaCC=" + nhaCungCap + "]";
+        return super.toString() +"HangHoaThucPham [ngayHH=" + ngayHH + ", ngaySX=" + ngaySX + ", nhaCC=" + nhaCungCap + "]"+ "Thue VAT"+ this.VAT() +super.toString();
+    }
+
+    @Override
+    public double VAT() {
+        double thueVat = 0;
+        thueVat = this.getDonGiaHH() * 0.05;
+        return thueVat;
     }
 
 }

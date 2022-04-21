@@ -5,8 +5,9 @@ import java.util.Date;
 public class HangHoaSanhSu extends HangHoa{
     private String nhaSX;
     private Date ngayNhapKho;
-    public HangHoaSanhSu(int sLTHKK, String tenHH, double donGiaHH, String nhaSX, Date ngayNhapKho) {
-        super(sLTHKK, tenHH, donGiaHH);
+    
+    public HangHoaSanhSu(int maH, int sLTHKK, String tenHH, double donGiaHH, String nhaSX, Date ngayNhapKho) {
+        super(maH, sLTHKK, tenHH, donGiaHH);
         this.nhaSX = nhaSX;
         this.ngayNhapKho = ngayNhapKho;
     }
@@ -32,7 +33,13 @@ public class HangHoaSanhSu extends HangHoa{
     }
     @Override
     public String toString() {
-        return "HangHoaSanhSu [ngayNhapKho=" + ngayNhapKho + ", nhaSX=" + nhaSX + "]";
+        return "HangHoaSanhSu [ngayNhapKho=" + ngayNhapKho + ", nhaSX=" + nhaSX + "]"+"Thue VAT" +this.VAT() +super.toString();
+    }
+    @Override
+    public double VAT() {
+        double thueVat = 0;
+        thueVat = this.getDonGiaHH() * 0.1;
+        return thueVat;
     }
     
     
