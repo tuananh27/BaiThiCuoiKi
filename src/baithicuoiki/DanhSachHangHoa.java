@@ -10,7 +10,7 @@ public class DanhSachHangHoa {
     private int sLHHDienMay;
     private int sLHHSanhSu;
     private int sLHHThucPham;
-    private String yn;
+    
     public Scanner sc = new Scanner(System.in);
     
     public void them(){

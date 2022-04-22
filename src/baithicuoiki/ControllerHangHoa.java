@@ -22,6 +22,7 @@ public class ControllerHangHoa {
         int maH = sc.nextInt();
         System.out.println("Nhap Ten Hang Hoa: ");
         String tenHH = sc.nextLine();
+        sc.nextLine();
         System.out.println("Nhap Don Gia Hang Hoa:");
         double donGiaHH = sc.nextDouble();
         System.out.println("Nhap So Luong Ton Kho:");
